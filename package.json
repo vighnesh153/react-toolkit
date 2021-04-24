@@ -9,7 +9,7 @@
     "build-storybook": "build-storybook",
     "start-storybook": "build-storybook && start-storybook -s ./public -p 9001",
     "prettier:fix": "prettier -w .",
-    "lint:fix": "eslint --fix .",
+    "lint:fix": "eslint --fix ./src/**/*.*",
     "release": "npm run test && standard-version && git push --follow-tags origin master",
     "release-publish": "npm run release && npm publish"
   },

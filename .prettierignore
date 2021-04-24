@@ -6,7 +6,13 @@ node_modules
 
 commitlint.config.js
 
-.eslint.js
+.eslintrc.js
+
+package.json
+
+package-lock.json
+
+tsconfig.json
 
 .husky
 
@@ -19,4 +25,6 @@ dist
 build
 
 .storybook
+
+*.svg
 
