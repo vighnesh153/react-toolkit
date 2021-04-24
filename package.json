@@ -8,14 +8,16 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "start-storybook": "build-storybook && start-storybook -s ./public -p 9001",
-    "tsc:init": "tsc --init",
-    "release": "standard-version"
+    "prettier:fix": "prettier -w .",
+    "lint:fix": "eslint --fix .",
+    "release": "npm run test && standard-version && git push --follow-tags origin master",
+    "release-publish": "npm run release && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git@vighnesh153:vighnesh153/react-toolkit.git"
   },
-  "author": "",
+  "author": "Vighnesh Raut",
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.2",
@@ -35,8 +37,17 @@
     "@storybook/addon-essentials": "^6.2.8",
     "@storybook/addon-links": "^6.2.8",
     "@storybook/react": "^6.2.8",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
     "babel-loader": "^8.2.2",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
+    "prettier": "^2.2.1",
     "standard-version": "^9.2.0"
   }
 }
