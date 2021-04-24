@@ -35,7 +35,6 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-	console.log('test commit');
   return (
     <button
       type="button"
