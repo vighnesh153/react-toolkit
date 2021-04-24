@@ -1,6 +1,6 @@
 {
   "name": "@vighnesh153/react-toolkit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A react component library for my projects",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "build-storybook": "build-storybook",
     "start-storybook": "build-storybook && start-storybook -s ./public -p 9001",
     "tsc:init": "tsc --init",
-    "prepare": "husky install"
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "@storybook/addon-links": "^6.2.8",
     "@storybook/react": "^6.2.8",
     "babel-loader": "^8.2.2",
-    "husky": "^6.0.0"
+    "husky": "^6.0.0",
+    "standard-version": "^9.2.0"
   }
 }
