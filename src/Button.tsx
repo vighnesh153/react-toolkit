@@ -16,7 +16,7 @@ export interface ButtonProps {
    */
   size?: 'small' | 'medium' | 'large';
   /**
-   * Button contents
+   * Button contents (label)
    */
   label: string;
   /**
