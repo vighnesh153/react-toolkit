@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://vighnesh153///compare/v0.0.3...v0.0.4) (2021-04-24)
+
+
+### Features
+
+* **better comment:** add 'label' in button label docs ([29b61f7](https://vighnesh153///commit/29b61f75985e96494bc021f71ee0f0e363bb9b14))
+
+
+### Bug Fixes
+
+* **add line:** added line ([3eae988](https://vighnesh153///commit/3eae988b62ba576fa35fb5a008c83b7322b34b60))
+
 ### [0.0.3](https://vighnesh153///compare/v0.0.2...v0.0.3) (2021-04-24)
 
 

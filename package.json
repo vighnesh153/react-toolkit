@@ -1,6 +1,6 @@
 {
   "name": "@vighnesh153/react-toolkit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A react component library for my projects",
   "main": "index.js",
   "scripts": {
