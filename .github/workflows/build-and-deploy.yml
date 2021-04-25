@@ -29,7 +29,7 @@ jobs:
         run: npm run build-storybook
 
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync ./storybook-static/ s3://react-toolkit.vighnesh153.com --delete --cache-control 'public, max-age=300, s-maxage=31536000'
+        run: aws s3 cp --recursive ./storybook-static/ s3://react-toolkit.vighnesh153.com --cache-control 'public, max-age=300, s-maxage=31536000'
 
       - name: Cloudfront invalidate
         run: aws cloudfront create-invalidation --paths '/*' --distribution-id E2CLOEVYO45MJL
