@@ -2,14 +2,15 @@
   "name": "@vighnesh153/react-toolkit",
   "version": "0.0.4",
   "description": "A react component library for my projects",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Just the beginning\"",
     "storybook": "start-storybook -p 6006",
+    "build": "tsc && cp -R src/styles dist/styles",
     "build-storybook": "build-storybook",
     "start-storybook": "build-storybook && start-storybook -s ./public -p 9001",
-    "prettier:fix": "prettier -w .",
-    "lint:fix": "eslint --fix ./src/**/*.*",
+    "prettier:fix": "prettier -w ./src/**/*.ts -w ./src/**/*.tsx",
+    "lint:fix": "eslint --fix ./src/**/*.ts --fix ./src/**/*.tsx",
     "release": "npm run test && standard-version && git push --follow-tags origin master",
     "release-publish": "npm run release && npm publish"
   },
@@ -17,6 +18,9 @@
     "type": "git",
     "url": "git@vighnesh153:vighnesh153/react-toolkit.git"
   },
+  "files": [
+    "dist"
+  ],
   "author": "Vighnesh Raut",
   "license": "ISC",
   "dependencies": {
@@ -34,10 +38,10 @@
     "@babel/core": "^7.13.16",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
-    "@storybook/addon-actions": "^6.2.8",
-    "@storybook/addon-essentials": "^6.2.8",
-    "@storybook/addon-links": "^6.2.8",
-    "@storybook/react": "^6.2.8",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-loader": "^8.2.2",
