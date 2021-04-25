@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://vighnesh153///compare/v0.0.4...v0.0.6) (2021-04-25)
+
+
+### Features
+
+* **material, themes:** introduce materialui and themes and styles ([9f42a35](https://vighnesh153///commit/9f42a35765196100f06326c5c83cb1dcee7eccb8))
+
+
+### Bug Fixes
+
+* **svg,sb:** svg semicolon error and rollback to previous sb version ([87d7253](https://vighnesh153///commit/87d7253f20172ac6fdf973aefdfebc53e1d02fa8))
+
 ### [0.0.5](https://vighnesh153///compare/v0.0.4...v0.0.5) (2021-04-25)
 
 
