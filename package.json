@@ -11,7 +11,7 @@
     "start-storybook": "build-storybook && start-storybook -s ./public -p 9001",
     "prettier:fix": "prettier -w ./src/**/*.ts -w ./src/**/*.tsx",
     "lint:fix": "eslint --fix ./src/**/*.ts --fix ./src/**/*.tsx",
-    "release": "npm run test && standard-version && git push --follow-tags origin master",
+    "release": "npm run test && npm run build && standard-version && git push --follow-tags",
     "release-publish": "npm run release && npm publish"
   },
   "repository": {
