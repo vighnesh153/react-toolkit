@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://vighnesh153///compare/v0.0.4...v0.0.5) (2021-04-25)
+
+
+### Features
+
+* **material, themes:** introduce materialui and themes and styles ([2ad9f4c](https://vighnesh153///commit/2ad9f4c7b354080be2b34ff99f11d3d284fb5ba6))
+
 ### [0.0.4](https://vighnesh153///compare/v0.0.3...v0.0.4) (2021-04-24)
 
 
