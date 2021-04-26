@@ -1,25 +1,30 @@
 # @vighnesh153/react-toolkit
 
-Visit [react-toolkit.vighnesh153.com](https://react-toolkit.vighnesh153.com)
+<div>
+<a href="LICENSE">
+    <img src="https://img.shields.io/npm/l/@vighnesh153/react-toolkit" alt="LICENSE" />
+</a>
+
+<a href="https://www.npmjs.com/package/@vighnesh153/react-toolkit">
+    <img src="https://img.shields.io/npm/v/@vighnesh153/react-toolkit" alt="version" />
+</a>
+
+<img src="https://img.shields.io/github/commit-activity/m/vighnesh153/react-toolkit" alt ="commit activity" />
+
+<img alt="npm downloads" src="https://img.shields.io/npm/dt/@vighnesh153/react-toolkit">
+</div>
+
+Visit the story book [react-toolkit.vighnesh153.com](https://react-toolkit.vighnesh153.com)
+
+Quick links:
+* About [@vighnesh153/react-toolkit](https://react-toolkit.vighnesh153.com/?path=/story/welcome-about--page)
 
 
-### Steps to create a react component library
-* `mkdir <PROJECT-NAME>`
-* `cd <PROJECT-NAME>`
-* `npm init -y`
-* **MAKE NECESSARY CHANGES IN PACKAGE.JSON**
-* `npx gitignore node`
-* **Add .idea, storybook-static in .gitignore'**
-* `npm install --save react react-dom typescript`
-* **Add this script in package.json: `"tsc:init": "tsc --init"`**
-* `npm run tsc:init`
-* `npx -p @storybook/cli sb init --story-format=csf-ts`
-
-
-### Project specific
+### Project specific (install manually)
 * [react-icons](https://react-icons.github.io/react-icons)
 
-### Pending
+### Backlog
 * Navbar
 * axios
 * formik
+* Table

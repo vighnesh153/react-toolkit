@@ -6,7 +6,7 @@ import MuiButton, {
 import { MuiThemeProvider } from '@material-ui/core';
 import { createMuiTheme, withStyles } from '@material-ui/core/styles';
 
-import theme from './theme';
+import theme from '../theme';
 
 export interface ButtonProps extends MuiButtonProps {
   /**
@@ -32,7 +32,7 @@ const StyledButton = withStyles({
         + (props.size === 'large' ? 1.2 : 0)
         + (props.size === 'medium' ? 1 : 0)
     }rem`,
-    borderRadius: 60,
+    // borderRadius: 60,
     fontWeight: 'bold',
   },
 })(MuiButton);
