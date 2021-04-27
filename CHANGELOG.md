@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://vighnesh153///compare/v0.0.6...v0.0.7) (2021-04-27)
+
+
+### Features
+
+* **button:** add custom button ([f9f2d8f](https://vighnesh153///commit/f9f2d8fbe2a8a092419c9f49f0bbdfbf6b6d4cf9))
+
 ### [0.0.6](https://vighnesh153///compare/v0.0.4...v0.0.6) (2021-04-25)
 
 
