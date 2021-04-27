@@ -1,0 +1,39 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Welcome/Getting Started" />
+
+<style>{`
+
+`}</style>
+
+# Getting started with [@vighnesh153/react-toolkit](https://www.npmjs.com/package/@vighnesh153/react-toolkit)
+
+<br />
+
+### Installation
+```sh
+npm install --save @vighnesh153/react-toolkit
+```
+
+### Usage
+```tsx
+import React from "react";
+
+import {
+  Button,
+  ButtonProps,
+} from "@vighnesh153/react-toolkit";
+
+const App: React.FC = (props) => {
+  return (
+    <div>
+      <Button
+        rvLabel={'Button Text'}
+        rvColor={'primary'}
+      />
+    </div>
+  );
+};
+
+export default App;
+```
