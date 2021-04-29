@@ -30,3 +30,4 @@ Quick links:
 * axios
 * formik
 * Table
+* Typography

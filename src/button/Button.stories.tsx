@@ -22,6 +22,14 @@ Secondary.args = {
   rvLabel: 'Secondary',
 };
 
+export const Link = Template.bind({});
+Link.args = {
+  rvColor: 'primary',
+  rvLabel: 'Primary',
+  rvIsLink: true,
+  href: 'https://vighnesh153.com',
+};
+
 export const Success = Template.bind({});
 Success.args = {
   rvColor: 'success',

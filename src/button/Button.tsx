@@ -17,16 +17,24 @@ export interface ButtonProps extends MuiButtonProps {
    * Color of the button
    */
   rvColor?: 'error' | 'warning' | 'success' | 'info' | 'primary' | 'secondary';
+  /**
+   * Is the button a link?
+   */
+  rvIsLink?: boolean;
 }
 
 const StyledButton = withStyles({
   root: {
-    padding: (props: MuiButtonProps) => theme.spacing(
-      1
-          + (props.size === 'small' ? -0.5 : 0)
-          + (props.size === 'large' ? 0.5 : 0),
-      5 + (props.size === 'small' ? -1 : 0) + (props.size === 'large' ? 2 : 0),
-    ),
+    padding: (props: MuiButtonProps) => (props.variant === 'text'
+      ? 0
+      : theme.spacing(
+        1
+              + (props.size === 'small' ? -0.5 : 0)
+              + (props.size === 'large' ? 0.5 : 0),
+        5
+              + (props.size === 'small' ? -1 : 0)
+              + (props.size === 'large' ? 2 : 0),
+      )),
     fontSize: (props: MuiButtonProps) => `${
       (props.size === 'small' ? 0.8 : 0)
         + (props.size === 'large' ? 1.2 : 0)
@@ -34,6 +42,10 @@ const StyledButton = withStyles({
     }rem`,
     // borderRadius: 60,
     fontWeight: 'bold',
+    background: (props) => (props.variant === 'text' ? 'none !important' : ''),
+    '&:hover': {
+      textDecoration: 'underline',
+    },
   },
 })(MuiButton);
 
@@ -43,6 +55,7 @@ const StyledButton = withStyles({
 export const Button: React.FC<ButtonProps> = ({
   rvLabel = 'Button',
   rvColor = 'primary',
+  rvIsLink,
   size = 'medium',
   variant = 'contained',
   ...props
@@ -63,7 +76,12 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <MuiThemeProvider theme={newTheme}>
-      <StyledButton {...props} variant={variant} color="primary" size={size}>
+      <StyledButton
+        {...props}
+        variant={rvIsLink ? 'text' : variant}
+        color="primary"
+        size={size}
+      >
         {rvLabel}
       </StyledButton>
     </MuiThemeProvider>
