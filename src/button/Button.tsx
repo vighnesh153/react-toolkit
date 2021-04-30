@@ -78,6 +78,7 @@ export const Button: React.FC<ButtonProps> = ({
     <MuiThemeProvider theme={newTheme}>
       <StyledButton
         {...props}
+        id={`button-${rvLabel?.toLowerCase().replace(' ', '-')}`}
         variant={rvIsLink ? 'text' : variant}
         color="primary"
         size={size}

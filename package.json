@@ -4,12 +4,13 @@
   "description": "A react component library for my projects",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"No tests yet.\"",
     "storybook": "start-storybook -p 6006",
     "build": "tsc && cp -R src/styles dist/styles",
     "build-storybook": "build-storybook",
     "changelog-story": "./scripts/changelog.sh",
     "start-storybook": "build-storybook && start-storybook -s ./public -p 9001",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "prettier:fix": "prettier -w ./src/**/*.ts -w ./src/**/*.tsx",
     "lint:fix": "eslint --fix ./src/**/*.ts --fix ./src/**/*.tsx",
     "release": "npm run test && npm run build && standard-version && npm run changelog-story && git add src/Changelog.stories.mdx && git commit -m \"chore: update changelog-stories.mdx\" && git push --follow-tags"
@@ -47,17 +48,25 @@
     "@storybook/addon-essentials": "^6.2.8",
     "@storybook/addon-links": "^6.2.8",
     "@storybook/react": "^6.2.8",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.25.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
     "prettier": "^2.2.1",
-    "standard-version": "^9.2.0"
+    "standard-version": "^9.2.0",
+    "ts-jest": "^26.5.5",
+    "ts-node": "^9.1.1"
   }
 }
