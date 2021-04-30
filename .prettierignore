@@ -29,3 +29,5 @@ build
 *.svg
 
 *.css
+
+jest.config.ts
