@@ -20,7 +20,7 @@ jobs:
           aws-region: ap-south-1
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Test
         run: npm run test
