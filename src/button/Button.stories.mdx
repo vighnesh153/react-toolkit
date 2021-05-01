@@ -1,7 +1,8 @@
 import { Meta, Canvas } from '@storybook/addon-docs/blocks';
 import { Button } from './Button';
-import { Box, MuiThemeProvider } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import theme from '../theme';
+import { ThemeProvider } from '..';
 
 <Meta
   title="Components/Button"
@@ -19,13 +20,18 @@ Read more about using the base Material UI button [here](https://material-ui.com
 
 ### Import
 ```tsx
-import { Box, MuiThemeProvider } from '@material-ui/core';
-import { Button, ButtonProps, theme } from "@vighnesh153/react-toolkit";
+import { Box } from '@material-ui/core';
+import {
+  Button,
+  ButtonProps,
+  theme,
+  ThemeProvider
+} from "@vighnesh153/react-toolkit";
 ```
 
 ### Primary Button
 <Canvas>
-  <MuiThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
     <Box display={'flex'}>
       <Button
         rvLabel={'Primary'}
@@ -39,13 +45,13 @@ import { Button, ButtonProps, theme } from "@vighnesh153/react-toolkit";
         />
       </Box>
     </Box>
-  </MuiThemeProvider>
+  </ThemeProvider>
 </Canvas>
 
 
 ### Secondary Button
 <Canvas>
-  <MuiThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
     <Box display={'flex'}>
       <Button
         rvLabel={'Secondary'}
@@ -60,7 +66,7 @@ import { Button, ButtonProps, theme } from "@vighnesh153/react-toolkit";
         />
       </Box>
     </Box>
-  </MuiThemeProvider>
+  </ThemeProvider>
 </Canvas>
 
 

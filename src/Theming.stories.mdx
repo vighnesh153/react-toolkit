@@ -20,14 +20,13 @@ need to make use of the `ThemeProvider` given by Material UI to set the theme.
 
 ```tsx
 import React from 'react';
-import { MuiThemeProvider } from '@material-ui/core';
-import { theme } from "@vighnesh153/react-toolkit";
+import { theme, ThemeProvider } from "@vighnesh153/react-toolkit";
 
 const App: React.FC = () => {
   return (
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       {/* Your code goes here */}
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 };
 ```
@@ -38,31 +37,31 @@ Read more about customizing the Material UI theme [here](https://material-ui.com
 
 ##### Example
 
+> Note: `ThemeProvider` is a component offered by Material UI as `MuiThemeProvider`. Same goes for `createMuiTheme` as
+`createTheme`. Exporting it from this library so that you don't have to install Material UI just to create/modify/add
+theme in your application.
+
 ```tsx
 import React from 'react';
-import { MuiThemeProvider } from '@material-ui/core';
 
-import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider, createTheme } from "@vighnesh153/react-toolkit";
 
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
-
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
-      main: purple[500],
+      main: 'purple',
     },
     secondary: {
-      main: green[500],
+      main: 'green',
     },
   },
 });
 
 const App: React.FC = () => {
   return (
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       {/* Your code goes here */}
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 };
 ```

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { MuiThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '..';
 
 import { Button, ButtonProps } from './Button';
 import theme from '../theme';
@@ -12,9 +12,9 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => (
-  <MuiThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
     <Button {...args} />
-  </MuiThemeProvider>
+  </ThemeProvider>
 );
 
 export const Primary = Template.bind({});
