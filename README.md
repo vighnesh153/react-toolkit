@@ -17,9 +17,9 @@
 Visit the story book [react-toolkit.vighnesh153.com](https://react-toolkit.vighnesh153.com)
 
 Quick links:
-* About [@vighnesh153/react-toolkit](https://react-toolkit.vighnesh153.com/?path=/story/welcome-about--page)
-* Getting Started [@vighnesh153/react-toolkit](https://react-toolkit.vighnesh153.com/?path=/story/welcome-getting-started--page)
-* Changelog [@vighnesh153/react-toolkit](https://react-toolkit.vighnesh153.com/?path=/story/welcome-changelog--page)
+* [About](https://react-toolkit.vighnesh153.com/?path=/story/welcome-about--page)
+* [Getting Started](https://react-toolkit.vighnesh153.com/?path=/story/welcome-getting-started--page)
+* [Changelog](https://react-toolkit.vighnesh153.com/?path=/story/welcome-changelog--page)
 
 
 ### Project specific (install manually)

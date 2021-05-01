@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build": "tsc && cp -R src/styles dist/styles",
+    "build": "rm -rf dist && tsc && cp -R src/styles dist/styles",
     "build-storybook": "build-storybook",
     "changelog-story": "./scripts/changelog.sh",
     "start-storybook": "build-storybook && start-storybook -s ./public -p 9001",
