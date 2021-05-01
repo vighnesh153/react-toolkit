@@ -10,6 +10,7 @@ function storySort(a, b) {
     prefix('welcome-', '0'),
     prefix('getting-started', 'a'),
     prefix('components-', '2'),
+    prefix('theming-', '3'),
     prefix('readme', 'aa0'),
     prefix('primary', 'aa1'),
     prefix('secondary', 'bbb'),
@@ -23,17 +24,16 @@ function storySort(a, b) {
   const left = prefixFn(a[0]);
   const right = prefixFn(b[0]);
 
-  // if (a[0].startsWith('component') && b[0].startsWith('component')) {
-  //   console.log('**************');
-  //   console.log(left);
-  //   console.log(right);
-  //   console.log(left === right ? 0 : left.localeCompare(right));
-  // }
-
   return left === right ? 0 : left.localeCompare(right);
 }
 
 export const parameters = {
+  layout: 'centered',
+  previewTabs: {
+    canvas: {
+      hidden: true,
+    },
+  },
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
@@ -42,10 +42,6 @@ export const parameters = {
     },
   },
 	options: {
-    // storySort: {
-    //   order: ['Welcome', 'Components', 'Example'],
-    //   locales: 'en-US',
-    // },
     storySort,
   },
 }
