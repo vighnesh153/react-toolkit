@@ -1,0 +1,68 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta
+  title="Theming/Usage"
+/>
+
+<style>{`
+
+`}</style>
+
+# THEMING
+
+You can theme your application using the theme of [@vighnesh153/react-toolkit](https://react-toolkit.vighnesh153.com) or,
+you can use your own theme to customize the experience. As this library uses Material UI as its base, for theming, you
+need to make use of the `ThemeProvider` given by Material UI to set the theme.
+
+<br />
+
+### Using React-Toolkit's theme
+
+```tsx
+import React from 'react';
+import { MuiThemeProvider } from '@material-ui/core';
+import { theme } from "@vighnesh153/react-toolkit";
+
+const App: React.FC = () => {
+  return (
+    <MuiThemeProvider theme={theme}>
+      {/* Your code goes here */}
+    </MuiThemeProvider>
+  );
+};
+```
+
+### Creating a custom theme
+
+Read more about customizing the Material UI theme [here](https://material-ui.com/customization/theming).
+
+##### Example
+
+```tsx
+import React from 'react';
+import { MuiThemeProvider } from '@material-ui/core';
+
+import { createMuiTheme } from '@material-ui/core/styles';
+
+import purple from '@material-ui/core/colors/purple';
+import green from '@material-ui/core/colors/green';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: purple[500],
+    },
+    secondary: {
+      main: green[500],
+    },
+  },
+});
+
+const App: React.FC = () => {
+  return (
+    <MuiThemeProvider theme={theme}>
+      {/* Your code goes here */}
+    </MuiThemeProvider>
+  );
+};
+```

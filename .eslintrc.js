@@ -27,6 +27,7 @@ module.exports = {
         'extensions': ['.ts', '.tsx']
       },
     ],
+    'react/destructuring-assignment': 'off',
     'react/jsx-props-no-spreading': 'off',
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],

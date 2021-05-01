@@ -3,10 +3,46 @@ import React, { useEffect, useState } from 'react';
 import MuiButton, {
   ButtonProps as MuiButtonProps,
 } from '@material-ui/core/Button';
-import { MuiThemeProvider } from '@material-ui/core';
+import {
+  lighten,
+  darken,
+  MuiThemeProvider,
+  Theme,
+  useTheme,
+} from '@material-ui/core';
 import { createMuiTheme, withStyles } from '@material-ui/core/styles';
 
-import theme from '../theme';
+const getBgColor = (props: MuiButtonProps, localMuiTheme: Theme): string => {
+  switch (props.variant) {
+    case 'contained':
+      return localMuiTheme.palette.primary.main;
+    default:
+      return 'inherit';
+  }
+};
+
+const getHoverBgColor = (props: MuiButtonProps, theme: Theme): string => {
+  switch (props.variant) {
+    case 'outlined':
+      return lighten(
+        theme.palette.primary.main,
+        theme.palette.action.hoverOpacity * 24,
+      );
+    case 'contained':
+      return theme.palette.primary.dark;
+    default:
+      return 'inherit';
+  }
+};
+
+const getColor = (props: MuiButtonProps, theme: Theme): string => {
+  switch (props.variant) {
+    case 'contained':
+      return theme.palette.primary.contrastText;
+    default:
+      return theme.palette.primary.main;
+  }
+};
 
 export interface ButtonProps extends MuiButtonProps {
   /**
@@ -23,31 +59,25 @@ export interface ButtonProps extends MuiButtonProps {
   rvIsLink?: boolean;
 }
 
-const StyledButton = withStyles({
+const StyledButton = withStyles((theme) => ({
   root: {
-    padding: (props: MuiButtonProps) => (props.variant === 'text'
-      ? 0
-      : theme.spacing(
-        1
-              + (props.size === 'small' ? -0.5 : 0)
-              + (props.size === 'large' ? 0.5 : 0),
-        5
-              + (props.size === 'small' ? -1 : 0)
-              + (props.size === 'large' ? 2 : 0),
-      )),
-    fontSize: (props: MuiButtonProps) => `${
-      (props.size === 'small' ? 0.8 : 0)
-        + (props.size === 'large' ? 1.2 : 0)
-        + (props.size === 'medium' ? 1 : 0)
-    }rem`,
-    // borderRadius: 60,
     fontWeight: 'bold',
-    background: (props) => (props.variant === 'text' ? 'none !important' : ''),
+    borderColor: lighten(
+      theme.palette.primary.light,
+      theme.palette.action.hoverOpacity * 5,
+    ),
+    background: (props: MuiButtonProps) => getBgColor(props, theme),
+    color: (props: MuiButtonProps) => getColor(props, theme),
     '&:hover': {
-      textDecoration: 'underline',
+      borderColor: darken(
+        theme.palette.primary.light,
+        theme.palette.action.hoverOpacity,
+      ),
+      background: (props: MuiButtonProps) => getHoverBgColor(props, theme),
+      textDecoration: (props: MuiButtonProps) => (props.variant === 'text' ? 'underline' : ''),
     },
   },
-})(MuiButton);
+}))(MuiButton);
 
 /**
  * Primary UI component for user interaction
@@ -60,10 +90,11 @@ export const Button: React.FC<ButtonProps> = ({
   variant = 'contained',
   ...props
 }: ButtonProps) => {
-  const [newTheme, setNewTheme] = useState(theme);
+  const theme = useTheme();
+  const [buttonTheme, setButtonTheme] = useState(theme);
 
   useEffect(() => {
-    const newThemeValue = createMuiTheme({
+    const newButtonTheme = createMuiTheme({
       ...theme,
       palette: {
         primary: {
@@ -71,17 +102,18 @@ export const Button: React.FC<ButtonProps> = ({
         },
       },
     });
-    setNewTheme(newThemeValue);
+    setButtonTheme(newButtonTheme);
   }, [rvColor]);
 
   return (
-    <MuiThemeProvider theme={newTheme}>
+    <MuiThemeProvider theme={buttonTheme}>
       <StyledButton
-        {...props}
         id={`button-${rvLabel?.toLowerCase().replace(' ', '-')}`}
         variant={rvIsLink ? 'text' : variant}
         color="primary"
         size={size}
+        disableRipple={rvIsLink}
+        {...props}
       >
         {rvLabel}
       </StyledButton>
