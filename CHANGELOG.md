@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/vighnesh153/react-toolkit/compare/v1.3.0...v1.4.0) (2021-05-01)
+
+
+### Features
+
+* **theme:** export Mui's ThemeProvider and createTheme from this package ([d2b62df](https://github.com/vighnesh153/react-toolkit/commit/d2b62df24da1f1968453f0963db7707f38c54ba4))
+
 ## [1.3.0](https://github.com/vighnesh153/react-toolkit/compare/v1.1.0...v1.3.0) (2021-05-01)
 
 
