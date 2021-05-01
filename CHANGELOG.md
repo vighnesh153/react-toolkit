@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/vighnesh153/react-toolkit/compare/v1.2.0...v1.2.1) (2021-05-01)
+
+
+### Bug Fixes
+
+* **dependencies:** replace all dependencies with peerDependencies ([eb4178e](https://github.com/vighnesh153/react-toolkit/commit/eb4178ecbd150e6e7434137086caef2da10b1225))
+
 ## [1.2.0](https://github.com/vighnesh153/react-toolkit/compare/v1.1.0...v1.2.0) (2021-05-01)
 
 
