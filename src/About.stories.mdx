@@ -15,6 +15,13 @@ import { Meta } from "@storybook/addon-docs/blocks";
     margin-top: 40px;
   }
 
+  .badges,
+  .badges a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
   .link-list {
     display: grid;
     grid-template-columns: 1fr;
@@ -91,6 +98,20 @@ I recommend building UIs with a [**component-driven**](https://componentdriven.o
 All the components under the `COMPONENTS` umbrella, are atomic components and can be used in any of your projects. Whereas, all components under
 then `PRIVATE` umbrella, are complex components and are tailored, specifically for my applications. Using them in your applications won't make
 much sense.
+
+<div className={'badges'}>
+  <a href="https://github.com/vighnesh153/react-toolkit/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/@vighnesh153/react-toolkit" alt="LICENSE" />
+  </a>
+
+  <a href="https://www.npmjs.com/package/@vighnesh153/react-toolkit">
+    <img src="https://img.shields.io/npm/v/@vighnesh153/react-toolkit" alt="version" />
+  </a>
+
+  <img src="https://img.shields.io/github/commit-activity/m/vighnesh153/react-toolkit" alt ="commit activity" />
+
+  <img alt="npm downloads" src="https://img.shields.io/npm/dt/@vighnesh153/react-toolkit" />
+</div>
 
 <div className="subheading">Links</div>
 
