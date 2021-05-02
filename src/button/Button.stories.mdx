@@ -1,0 +1,131 @@
+import { Meta, Story, ArgsTable, Preview, Canvas } from '@storybook/addon-docs/blocks';
+import { Box, MuiThemeProvider as ThemeProvider } from "@material-ui/core";
+import { Button } from '.';
+import theme from '../theme';
+
+<Meta
+  title="Components/Buttons"
+/>
+
+<style>{`
+
+`}</style>
+
+# Button
+
+Primary UI component for user interaction. Read more about using the base Material UI
+button [here](https://material-ui.com/components/buttons).
+
+### Import
+```tsx
+import { Button, ButtonProps, ThemeProvider, theme } from "@vighnesh153/react-toolkit";
+```
+
+> You don't have to wrap all your buttons with `ThemeProvider`. You just need to do it once at the
+> top-most level in your app or at different places where you want to use a different theme.
+
+<Preview withToolbar>
+  <ThemeProvider theme={theme}>
+    <Button
+      rvColor={'primary'}
+      rvLabel={'Primary'}
+    />
+  </ThemeProvider>
+</Preview>
+
+<ArgsTable of={Button} />
+
+## Stories
+
+<br />
+
+#### Primary
+<Canvas>
+  <ThemeProvider theme={theme}>
+    <Box display={'flex'}>
+      <Button
+        rvColor={'primary'}
+        rvLabel={'Primary'}
+      />
+      <Box ml={2}>
+        <Button
+          rvColor={'primary'}
+          rvLabel={'Disabled'}
+          disabled
+        />
+      </Box>
+    </Box>
+  </ThemeProvider>
+</Canvas>
+
+#### Secondary
+<Canvas>
+  <ThemeProvider theme={theme}>
+    <Box display={'flex'}>
+      <Button
+        rvColor={'primary'}
+        variant={'outlined'}
+        rvLabel={'Secondary'}
+      />
+      <Box ml={2}>
+        <Button
+          rvColor={'primary'}
+          variant={'outlined'}
+          rvLabel={'Disabled'}
+          disabled
+        />
+      </Box>
+    </Box>
+  </ThemeProvider>
+</Canvas>
+
+#### Link
+<Canvas>
+  <ThemeProvider theme={theme}>
+    <Button
+      rvColor={'primary'}
+      rvLabel={'Link'}
+      rvIsLink
+    />
+  </ThemeProvider>
+</Canvas>
+
+#### Success
+<Canvas>
+  <ThemeProvider theme={theme}>
+    <Button
+      rvColor={'success'}
+      rvLabel={'Success'}
+    />
+  </ThemeProvider>
+</Canvas>
+
+#### Info
+<Canvas>
+  <ThemeProvider theme={theme}>
+    <Button
+      rvColor={'info'}
+      rvLabel={'Info'}
+    />
+  </ThemeProvider>
+</Canvas>
+
+#### Warning
+<Canvas>
+  <ThemeProvider theme={theme}>
+    <Button
+      rvColor={'warning'}
+      rvLabel={'Warning'}
+    />
+  </ThemeProvider>
+</Canvas>
+
+#### Error
+<Canvas>
+  <ThemeProvider theme={theme}>
+    <Button
+      rvColor={'error'}
+      rvLabel={'Error'}
+    />
+  </ThemeProvider>
+</Canvas>
