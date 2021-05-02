@@ -4,11 +4,11 @@
   "description": "A react component library for my projects",
   "main": "dist/index.js",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build": "rm -rf dist && tsc && cp -R src/styles dist/styles",
     "build-storybook": "build-storybook",
     "changelog-story": "./scripts/changelog.sh",
-    "start-storybook": "build-storybook && start-storybook -s ./public -p 9001",
+    "start-storybook": "start-storybook -s ./public -p 9001",
     "test": "jest",
     "test:watch": "jest --watch",
     "prettier:fix": "prettier -w ./src/**/*.ts -w ./src/**/*.tsx",
