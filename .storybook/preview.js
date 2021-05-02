@@ -1,3 +1,7 @@
+import React from 'react';
+import { MuiThemeProvider } from '@material-ui/core';
+import theme from '../src/theme';
+
 /** If the string contains a phrase, prefix it. This is useful for making ordering sections */
 const prefix = (phrase, prefix) => (/** @type {string} */ value) => {
   const index = value.indexOf(phrase);
@@ -9,8 +13,8 @@ function storySort(a, b) {
   const prefixFn = pipe(
     prefix('welcome-', '0'),
     prefix('getting-started', 'a'),
-    prefix('components-', '2'),
-    prefix('theming-', '3'),
+    prefix('theming-', '2'),
+    prefix('components-', '3'),
     prefix('readme', 'aa0'),
     prefix('primary', 'aa1'),
     prefix('secondary', 'bbb'),
@@ -29,11 +33,7 @@ function storySort(a, b) {
 
 export const parameters = {
   layout: 'centered',
-  previewTabs: {
-    canvas: {
-      hidden: true,
-    },
-  },
+  viewMode: 'docs',
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
@@ -44,4 +44,12 @@ export const parameters = {
 	options: {
     storySort,
   },
-}
+};
+
+export const decorators = [
+  (Story) => (
+    <MuiThemeProvider theme={theme}>
+      <Story />
+    </MuiThemeProvider>
+  ),
+];

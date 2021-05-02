@@ -80,7 +80,17 @@ const StyledButton = withStyles((theme) => ({
 }))(MuiButton);
 
 /**
- * Primary UI component for user interaction
+ * Primary UI component for user interaction. Read more about using the base Material UI
+ * button [here](https://material-ui.com/components/buttons).
+ *
+ * ### Import
+ * ```tsx
+ * import { Button, ButtonProps } from "@vighnesh153/react-toolkit";
+ * ```
+ *
+ * > Side note: `onFocusVisible` prop is not mandatory in the `Button`. Not sure why that is
+ * > showing up in the 'Show Code' component.
+ *
  */
 export const Button: React.FC<ButtonProps> = ({
   rvLabel = 'Button',
@@ -97,6 +107,7 @@ export const Button: React.FC<ButtonProps> = ({
     const newButtonTheme = createMuiTheme({
       ...theme,
       palette: {
+        ...theme.palette,
         primary: {
           main: theme.palette[rvColor].main,
         },
