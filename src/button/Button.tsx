@@ -10,7 +10,7 @@ import {
   Theme,
   useTheme,
 } from '@material-ui/core';
-import { createMuiTheme, withStyles } from '@material-ui/core/styles';
+import { createTheme, withStyles } from '@material-ui/core/styles';
 
 const getBgColor = (props: MuiButtonProps, localMuiTheme: Theme): string => {
   switch (props.variant) {
@@ -96,7 +96,7 @@ export const Button: React.FC<ButtonProps> = ({
   const [buttonTheme, setButtonTheme] = useState(theme);
 
   useEffect(() => {
-    const newButtonTheme = createMuiTheme({
+    const newButtonTheme = createTheme({
       ...theme,
       palette: {
         ...theme.palette,

@@ -13,6 +13,7 @@ function storySort(a, b) {
   const prefixFn = pipe(
     prefix('welcome-', '0'),
     prefix('getting-started', 'a'),
+    prefix('design-system-', '1'),
     prefix('theming-', '2'),
     prefix('components-', '3'),
     prefix('readme', 'aa0'),

@@ -31,3 +31,4 @@ Quick links:
 * formik
 * Table
 * Typography
+* Modal
