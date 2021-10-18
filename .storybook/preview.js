@@ -1,5 +1,5 @@
 import React from 'react';
-import { MuiThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@mui/material';
 import theme from '../src/theme';
 
 /** If the string contains a phrase, prefix it. This is useful for making ordering sections */
@@ -49,8 +49,8 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <Story />
-    </MuiThemeProvider>
+    </ThemeProvider>
   ),
 ];

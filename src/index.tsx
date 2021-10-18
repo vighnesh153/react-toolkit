@@ -1,8 +1,4 @@
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
-import Theme from './theme';
+import { ThemeProvider } from '@mui/material';
+import theme from './theme';
 
-export const theme = Theme;
-export const createTheme = createMuiTheme;
-export const ThemeProvider = MuiThemeProvider;
-
-export { Button, ButtonProps } from './button';
+export { ThemeProvider, theme };

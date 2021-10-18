@@ -1,18 +1,20 @@
-/**
- * @author Vighnesh Raut <rvighnes@amazon.com>
- */
-
 import React from 'react';
-import { Typography, useTheme } from '@material-ui/core';
-import { Variant } from '@material-ui/core/styles/createTypography';
+import { Meta } from '@storybook/addon-docs/blocks';
 
-interface TypographyRowProps {
-  variant: string;
-}
+import { Box, ThemeProvider } from '@mui/material';
+import theme from './theme';
 
-export const TypographyRow: React.FC<TypographyRowProps> = (props) => {
+<Meta
+  title="Components/Typography"
+/>
+
+export const Spacer = <Box mb={3.5} />;
+
+import { Typography, useTheme } from '@mui/material';
+
+export const TypographyRow = (props) => {
   const theme = useTheme();
-  const variant = props.variant.toLowerCase() as Variant;
+  const variant = props.variant.toLowerCase();
 
   return (
     <div style={{ position: 'relative' }}>
@@ -69,4 +71,33 @@ export const TypographyRow: React.FC<TypographyRowProps> = (props) => {
   );
 };
 
-export default TypographyRow;
+
+# Typography
+
+In this design system, I am using [Nunito](https://fonts.google.com/specimen/Nunito) as the font family with 'sans-serif' as fallback.
+
+<ThemeProvider theme={theme}>
+  <section>
+    <TypographyRow variant={'Caption'} />
+    {Spacer}
+    <TypographyRow variant={'Body2'} />
+    {Spacer}
+    <TypographyRow variant={'Body1'} />
+    {Spacer}
+    <TypographyRow variant={'Subtitle2'} />
+    {Spacer}
+    <TypographyRow variant={'Subtitle1'} />
+    {Spacer}
+    <TypographyRow variant={'H6'} />
+    {Spacer}
+    <TypographyRow variant={'H5'} />
+    {Spacer}
+    <TypographyRow variant={'H4'} />
+    {Spacer}
+    <TypographyRow variant={'H3'} />
+    {Spacer}
+    <TypographyRow variant={'H2'} />
+    {Spacer}
+    <TypographyRow variant={'H1'} />
+  </section>
+</ThemeProvider>
