@@ -13,18 +13,17 @@ const pipe = (...fns) => value => fns.reduce((result, fn) => fn(result), value);
 function storySort(a, b) {
   const prefixFn = pipe(
     prefix('welcome-', '0'),
-    prefix('getting-started', 'a'),
-    prefix('design-system-', '1'),
-    prefix('theming-', '2'),
+    prefix('about', '0-a'),
+    prefix('getting-started', '0-b'),
+    prefix('theming-', '0-c'),
+    prefix('changelog-', '0-d'),
+
     prefix('components-', '3'),
-    prefix('readme', 'aa0'),
-    prefix('primary', 'aa1'),
-    prefix('secondary', 'bbb'),
-    prefix('link', 'bb'),
-    prefix('success', 'cc'),
-    prefix('info', 'dd'),
-    prefix('warning', 'ee'),
-    prefix('error', 'ff'),
+
+    prefix('private-', '4'),
+
+    // Always at top in any folder
+    prefix('readme-', '0a'),
   );
 
   const left = prefixFn(a[0]);
