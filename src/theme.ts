@@ -1,19 +1,22 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material';
 
 import './styles/index.css';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#37474F',
+      main: 'hsl(200, 18%, 26%)',
     },
     secondary: {
-      main: '#FF7043',
+      main: 'hsl(14, 100%, 63%)',
     },
+  },
+  shape: {
+    borderRadius: 4,
   },
   typography: {
     fontFamily: [
-      '"Nunito"',
+      '"Roboto"',
       'sans-serif',
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',

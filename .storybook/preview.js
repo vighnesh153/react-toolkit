@@ -1,5 +1,6 @@
 import React from 'react';
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import {ThemeProvider as EmotionTheming} from "@emotion/react"
 import theme from '../src/theme';
 
 /** If the string contains a phrase, prefix it. This is useful for making ordering sections */
@@ -48,9 +49,17 @@ export const parameters = {
 };
 
 export const decorators = [
-  (Story) => (
-    <ThemeProvider theme={theme}>
-      <Story />
-    </ThemeProvider>
-  ),
+  (Story) => {
+  console.log(Story)
+  return (
+    <EmotionTheming theme={theme}>
+      <ThemeProvider theme={theme}>
+        <div id={'vighnesh'}>
+          <CssBaseline />
+          <Story />
+        </div>
+      </ThemeProvider>
+    </EmotionTheming>
+  )
+  },
 ];

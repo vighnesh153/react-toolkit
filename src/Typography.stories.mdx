@@ -1,103 +1,73 @@
-import React from 'react';
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta } from "@storybook/addon-docs";
 
-import { Box, ThemeProvider } from '@mui/material';
-import theme from './theme';
+import { Box } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 
-<Meta
-  title="Components/Typography"
-/>
+<Meta title="Components/Typography" />
 
 export const Spacer = <Box mb={3.5} />;
 
-import { Typography, useTheme } from '@mui/material';
-
 export const TypographyRow = (props) => {
   const theme = useTheme();
-  const variant = props.variant.toLowerCase();
-
+  const typography = theme.typography[props.variant];
   return (
-    <div style={{ position: 'relative' }}>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'baseline',
-          flexWrap: 'nowrap',
-          overflow: 'hidden',
-          position: 'relative',
-        }}
+    <Box position={"relative"}>
+      <Box
+        display={"flex"}
+        alignItems={"baseline"}
+        flexWrap={"nowrap"}
+        overflow={"hidden"}
+        position={"relative"}
       >
         <p
           style={{
             minWidth: 200,
             margin: 0,
-            fontWeight: 'bold',
-            lineHeight: '1em',
+            fontWeight: "bold",
+            lineHeight: typography.lineHeight,
           }}
         >
-          {props.variant}
-          &nbsp; (
-          {theme.typography[variant].fontSize}
-          )
+          {props.variant}&nbsp; ({typography.fontSize})
         </p>
         <Typography
-          variant={variant}
+          variant={props.variant}
+          fontSize={typography.fontSize}
           style={{
-            whiteSpace: 'nowrap',
-            lineHeight: '1em',
+            whiteSpace: "nowrap",
+            lineHeight: "1em",
           }}
         >
           The quick brown fox jumps over the lazy dog.
         </Typography>
-      </div>
-      <hr
-        style={{
-          width: '100%',
-          zIndex: 1,
-        }}
-      />
-      <div
-        style={{
-          inset: 0,
-          position: 'absolute',
-          zIndex: 2,
-          boxShadow: `
-              inset -15px 0 10px -10px rgba(255, 255, 255, 1),
-              inset -60px 0 10px -10px rgba(255, 255, 255, 0.5)
-            `,
-        }}
-      />
-    </div>
+      </Box>
+      <hr style={{ width: "100%", zIndex: 1 }} />
+    </Box>
   );
 };
 
-
 # Typography
 
-In this design system, I am using [Nunito](https://fonts.google.com/specimen/Nunito) as the font family with 'sans-serif' as fallback.
-
-<ThemeProvider theme={theme}>
-  <section>
-    <TypographyRow variant={'Caption'} />
-    {Spacer}
-    <TypographyRow variant={'Body2'} />
-    {Spacer}
-    <TypographyRow variant={'Body1'} />
-    {Spacer}
-    <TypographyRow variant={'Subtitle2'} />
-    {Spacer}
-    <TypographyRow variant={'Subtitle1'} />
-    {Spacer}
-    <TypographyRow variant={'H6'} />
-    {Spacer}
-    <TypographyRow variant={'H5'} />
-    {Spacer}
-    <TypographyRow variant={'H4'} />
-    {Spacer}
-    <TypographyRow variant={'H3'} />
-    {Spacer}
-    <TypographyRow variant={'H2'} />
-    {Spacer}
-    <TypographyRow variant={'H1'} />
-  </section>
-</ThemeProvider>
+<Box>
+  {Spacer}
+  <TypographyRow variant={"caption"} />
+  {Spacer}
+  <TypographyRow variant={"body2"} />
+  {Spacer}
+  <TypographyRow variant={"body1"} />
+  {Spacer}
+  <TypographyRow variant={"subtitle2"} />
+  {Spacer}
+  <TypographyRow variant={"subtitle1"} />
+  {Spacer}
+  <TypographyRow variant={"h6"} />
+  {Spacer}
+  <TypographyRow variant={"h5"} />
+  {Spacer}
+  <TypographyRow variant={"h4"} />
+  {Spacer}
+  <TypographyRow variant={"h3"} />
+  {Spacer}
+  <TypographyRow variant={"h2"} />
+  {Spacer}
+  <TypographyRow variant={"h1"} />
+</Box>
