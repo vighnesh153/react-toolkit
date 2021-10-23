@@ -54,10 +54,8 @@ export const decorators = [
   return (
     <EmotionTheming theme={theme}>
       <ThemeProvider theme={theme}>
-        <div id={'vighnesh'}>
-          <CssBaseline />
-          <Story />
-        </div>
+        <CssBaseline />
+        <Story />
       </ThemeProvider>
     </EmotionTheming>
   )
