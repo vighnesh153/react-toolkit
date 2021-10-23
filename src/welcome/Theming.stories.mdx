@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="Welcome/Theming"
+/>
+
+<style>{`
+
+`}</style>
+
+# THEMING
+
+You can theme your application using the theme of [@vighnesh153/react-toolkit](https://react-toolkit.vighnesh153.com) or,
+you can use your own theme to customize the experience. As this library uses Material UI as its base, for theming, you
+need to make use of the `ThemeProvider` given by Material UI to set the theme.
+
+<br />
+
+### Using React-Toolkit's theme
+
+```tsx
+import React from 'react';
+import { ThemeProvider } from '@mui/material';
+import { theme } from "@vighnesh153/react-toolkit";
+
+const App: React.FC = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      {/* Your code goes here */}
+    </ThemeProvider>
+  );
+};
+```
