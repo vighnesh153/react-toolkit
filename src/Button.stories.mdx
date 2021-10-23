@@ -1,105 +1,96 @@
-import { Meta, Story, ArgsTable, Preview, Canvas } from '@storybook/addon-docs/blocks';
-import { Box, Button, ThemeProvider } from '@mui/material';
-import theme from './theme';
+import { Meta } from "@storybook/addon-docs";
+import { Box, Button, ThemeProvider } from "@mui/material";
+import theme from "./theme";
 
-<Meta
-  title="Components/Buttons"
-/>
-
-<style>{`
-
-`}</style>
+<Meta title="Components/Buttons" component={Button} />
 
 # Button
 
 Primary UI component for user interaction. Read more about using the base Material UI
-button [here](https://material-ui.com/components/buttons).
+button [here](https://material-ui.com/components/buttons)
 
-### Import
-
-> You don't have to wrap all your buttons with `ThemeProvider`. You just need to do it once at the
-> top-most level in your app or at different places where you want to use a different theme.
-
-<Preview withToolbar>
-  <ThemeProvider theme={theme}>
-    <Button variant={'contained'} color={'primary'}>
-      Button
-    </Button>
-  </ThemeProvider>
-</Preview>
-
-<ArgsTable of={Button} />
-
-## Stories
-
-<br />
+export const Template = (args) => <Button {...args} />
 
 #### Primary
-<Canvas>
-  <ThemeProvider theme={theme}>
-    <Box display={'flex'}>
-      <Button variant={'contained'} color={'primary'}>
-        Contained
-      </Button>
-      <Box ml={2}>
-        <Button variant={'outlined'} color={'primary'}>
-          Outlined
-        </Button>
-      </Box>
-      <Box ml={2}>
-        <Button variant={'text'} color={'primary'}>
-          Text
-        </Button>
-      </Box>
-    </Box>
-  </ThemeProvider>
-</Canvas>
+
+<ThemeProvider theme={theme}>
+  <Box display={"flex"} gap={2}>
+    <Button variant={"contained"} color={"primary"}>
+      Contained
+    </Button>
+    <Button variant={"outlined"} color={"primary"}>
+      Outlined
+    </Button>
+    <Button variant={"text"} color={"primary"}>
+      Text
+    </Button>
+  </Box>
+</ThemeProvider>
 
 #### Secondary
-<Canvas>
-  <ThemeProvider theme={theme}>
-    <Box display={'flex'}>
-      <Button variant={'contained'} color={'secondary'}>
-        Contained
-      </Button>
-      <Box ml={2}>
-        <Button variant={'outlined'} color={'secondary'}>
-          Outlined
-        </Button>
-      </Box>
-      <Box ml={2}>
-        <Button variant={'text'} color={'secondary'}>
-          Text
-        </Button>
-      </Box>
-    </Box>
-  </ThemeProvider>
-</Canvas>
+
+<ThemeProvider theme={theme}>
+  <Box display={"flex"} gap={2}>
+    <Button variant={"contained"} color={"secondary"}>
+      Contained
+    </Button>
+    <Button variant={"outlined"} color={"secondary"}>
+      Outlined
+    </Button>
+    <Button variant={"text"} color={"secondary"}>
+      Text
+    </Button>
+  </Box>
+</ThemeProvider>
 
 #### Success
-<Canvas>
-  <ThemeProvider theme={theme}>
 
-  </ThemeProvider>
-</Canvas>
+<ThemeProvider theme={theme}>
+  <Box display={"flex"} gap={2}>
+    <Button variant={"contained"} color={"success"}>
+      Success
+    </Button>
+    <Button variant={"outlined"} color={"success"}>
+      Success
+    </Button>
+  </Box>
+</ThemeProvider>
 
 #### Info
-<Canvas>
-  <ThemeProvider theme={theme}>
 
-  </ThemeProvider>
-</Canvas>
+<ThemeProvider theme={theme}>
+  <Box display={"flex"} gap={2}>
+    <Button variant={"contained"} color={"info"}>
+      Info
+    </Button>
+    <Button variant={"outlined"} color={"info"}>
+      Info
+    </Button>
+  </Box>
+</ThemeProvider>
 
 #### Warning
-<Canvas>
-  <ThemeProvider theme={theme}>
 
-  </ThemeProvider>
-</Canvas>
+<ThemeProvider theme={theme}>
+  <Box display={"flex"} gap={2}>
+    <Button variant={"contained"} color={"warning"}>
+      Warning
+    </Button>
+    <Button variant={"outlined"} color={"warning"}>
+      Warning
+    </Button>
+  </Box>
+</ThemeProvider>
 
 #### Error
-<Canvas>
-  <ThemeProvider theme={theme}>
 
-  </ThemeProvider>
-</Canvas>
+<ThemeProvider theme={theme}>
+  <Box display={"flex"} gap={2}>
+    <Button variant={"contained"} color={"error"}>
+      Error
+    </Button>
+    <Button variant={"outlined"} color={"error"}>
+      Error
+    </Button>
+  </Box>
+</ThemeProvider>
