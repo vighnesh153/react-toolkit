@@ -1,0 +1,198 @@
+import { Meta } from "@storybook/addon-docs";
+import {
+  Box,
+  TextField,
+  ThemeProvider,
+  FormControl,
+  MenuItem,
+  FormHelperText,
+  Select,
+  InputLabel,
+  Slider,
+  Switch,
+  Checkbox,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  Radio, Rating,
+} from '@mui/material';
+import theme from "../theme";
+
+<Meta title="Components/Inputs" />
+
+# Inputs
+
+---
+
+#### TextField
+
+export const commonPropsColors = {
+  focused: true,
+  fullWidth: true,
+};
+
+<ThemeProvider theme={theme}>
+  <Box display={"flex"} gap={2} width={600} mt={2}>
+    <TextField
+      {...commonPropsColors}
+      color={"primary"}
+      placeholder={"Primary"}
+    />
+    <TextField
+      {...commonPropsColors}
+      color={"secondary"}
+      placeholder={"Secondary"}
+    />
+  </Box>
+  <Box display={"flex"} gap={2} width={600} mt={2}>
+    <TextField
+      {...commonPropsColors}
+      color={"success"}
+      placeholder={"Success"}
+    />
+    <TextField {...commonPropsColors} color={"info"} placeholder={"Info"} />
+  </Box>
+  <Box display={"flex"} gap={2} width={600} mt={2}>
+    <TextField
+      {...commonPropsColors}
+      color={"warning"}
+      placeholder={"Warning"}
+    />
+    <TextField {...commonPropsColors} color={"error"} placeholder={"Error"} />
+  </Box>
+</ThemeProvider>
+
+<Box mb={3} />
+
+### Select
+
+<ThemeProvider theme={theme}>
+  <FormControl sx={{ m: 1, minWidth: 120 }}>
+    <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
+    <Select
+      labelId="demo-simple-select-helper-label"
+      id="demo-simple-select-helper"
+      label="Age"
+    >
+      <MenuItem value="" aria-label={"None"}>
+        <em>None</em>
+      </MenuItem>
+      <MenuItem value={10}>Ten</MenuItem>
+      <MenuItem value={20}>Twenty</MenuItem>
+      <MenuItem value={30}>Thirty</MenuItem>
+    </Select>
+    <FormHelperText>With label + helper text</FormHelperText>
+  </FormControl>
+</ThemeProvider>
+
+<Box mb={3} />
+
+### Slider
+
+<ThemeProvider theme={theme}>
+  <Slider
+    size="small"
+    defaultValue={70}
+    aria-label="Small"
+    valueLabelDisplay="auto"
+  />
+  <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+  <Slider
+    defaultValue={30}
+    valueLabelDisplay="auto"
+    step={10}
+    marks
+    min={10}
+    max={110}
+  />
+</ThemeProvider>
+
+<Box mb={3} />
+
+### Switch
+
+<ThemeProvider theme={theme}>
+  <Switch defaultChecked />
+  <Switch defaultChecked color="secondary" />
+  <Switch defaultChecked color="success" />
+  <Switch defaultChecked color="error" />
+  <Switch defaultChecked color="info" />
+</ThemeProvider>
+
+<Box mb={3} />
+
+### Checkbox
+
+<ThemeProvider theme={theme}>
+  <Checkbox defaultChecked color={"primary"} />
+  <Checkbox defaultChecked color={"secondary"} />
+  <Checkbox defaultChecked color={"success"} />
+  <Checkbox defaultChecked color={"info"} />
+  <Checkbox defaultChecked color={"error"} />
+</ThemeProvider>
+
+<Box mb={3} />
+
+### Radio
+
+<ThemeProvider theme={theme}>
+  <FormControl component="fieldset">
+    <FormLabel component="legend">Gender</FormLabel>
+    <RadioGroup
+      aria-label="gender"
+      defaultValue="female"
+      name="radio-buttons-group"
+    >
+      <FormControlLabel value="female" control={<Radio />} label="Female" />
+      <FormControlLabel value="male" control={<Radio />} label="Male" />
+      <FormControlLabel value="other" control={<Radio />} label="Other" />
+    </RadioGroup>
+  </FormControl>
+
+  <FormControl component="fieldset">
+    <FormLabel component="legend">Gender</FormLabel>
+    <RadioGroup
+      aria-label="gender"
+      defaultValue="female"
+      name="radio-buttons-group"
+    >
+      <FormControlLabel value="female" control={<Radio color={'success'} />} label="Female" />
+      <FormControlLabel value="male" control={<Radio color={'success'} />} label="Male" />
+      <FormControlLabel value="other" control={<Radio color={'success'} />} label="Other" />
+    </RadioGroup>
+  </FormControl>
+
+  <FormControl component="fieldset">
+    <FormLabel component="legend">Gender</FormLabel>
+    <RadioGroup
+      aria-label="gender"
+      defaultValue="female"
+      name="radio-buttons-group"
+    >
+      <FormControlLabel value="female" control={<Radio color={'error'} />} label="Female" />
+      <FormControlLabel value="male" control={<Radio color={'error'} />} label="Male" />
+      <FormControlLabel value="other" control={<Radio color={'error'} />} label="Other" />
+    </RadioGroup>
+  </FormControl>
+
+  <FormControl component="fieldset">
+    <FormLabel component="legend">Gender</FormLabel>
+    <RadioGroup
+      aria-label="gender"
+      defaultValue="female"
+      name="radio-buttons-group"
+    >
+      <FormControlLabel value="female" control={<Radio color={'info'} />} label="Female" />
+      <FormControlLabel value="male" control={<Radio color={'info'} />} label="Male" />
+      <FormControlLabel value="other" control={<Radio color={'info'} />} label="Other" />
+    </RadioGroup>
+  </FormControl>
+</ThemeProvider>
+
+<Box mb={3} />
+
+### Rating
+
+<ThemeProvider theme={theme}>
+  <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+</ThemeProvider>
