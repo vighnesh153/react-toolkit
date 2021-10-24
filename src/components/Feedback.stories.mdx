@@ -1,0 +1,58 @@
+import { Meta } from "@storybook/addon-docs";
+import {
+  Alert,
+  Box, CircularProgress, LinearProgress, Skeleton,
+  ThemeProvider,
+} from '@mui/material';
+import theme from "../theme";
+
+<Meta title="Components/Feedback" />
+
+# Feedback
+
+---
+
+### Alert
+
+<ThemeProvider theme={theme}>
+  <Box display={'flex'} flexDirection={'column'} gap={2}>
+    <Alert severity="error">This is an error alert — check it out!</Alert>
+    <Alert severity="warning">This is a warning alert — check it out!</Alert>
+    <Alert severity="info">This is an info alert — check it out!</Alert>
+    <Alert severity="success">This is a success alert — check it out!</Alert>
+  </Box>
+</ThemeProvider>
+
+<Box mb={3} />
+
+### Circular Progress
+
+<ThemeProvider theme={theme}>
+  <Box display={'flex'} gap={2}>
+    <CircularProgress color="secondary" />
+    <CircularProgress color="success" />
+    <CircularProgress color="inherit" />
+  </Box>
+</ThemeProvider>
+
+<Box mb={3} />
+
+### Linear Progress
+
+<ThemeProvider theme={theme}>
+  <Box display={'flex'} flexDirection={'column'} gap={1}>
+    <LinearProgress color="secondary" />
+    <LinearProgress color="success" />
+    <LinearProgress color="inherit" />
+  </Box>
+</ThemeProvider>
+
+<Box mb={3} />
+
+### Skeleton
+
+<ThemeProvider theme={theme}>
+  <Skeleton />
+  <Skeleton animation="wave" />
+  <Skeleton animation={false} />
+</ThemeProvider>
