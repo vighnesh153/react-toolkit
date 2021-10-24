@@ -24,11 +24,3 @@ Quick links:
 
 ### Project specific (install manually)
 * [react-icons](https://react-icons.github.io/react-icons)
-
-### Backlog
-* Navbar
-* axios
-* formik
-* Table
-* Typography
-* Modal
