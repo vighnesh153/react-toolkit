@@ -24,3 +24,9 @@ Quick links:
 
 ### Project specific (install manually)
 * [react-icons](https://react-icons.github.io/react-icons)
+
+### Publishing
+```shell
+npm run release
+npm publish
+```
